@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# React Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- React, Firebase를 이용한 리액트 블로그 프로젝트 입니다.
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 프로젝트 설명
 
-## Expanding the ESLint configuration
+## 주요 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- CRUD 기능 구현
+- 사용자 인증 및 권한 관리
+- 라우팅과 페이지 구성
 
-- Configure the top-level `parserOptions` property like this:
+## 앱 구조
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- (vite) SPA
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 상태관리
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Context API
+- 권한관리
+- 테마관리(다크모드 기능)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## 애니메이션 & 스타일링
+
+- CSS 사용 (BEM 구조)
+- 캐러셀 transition
+
+## 배포
+
+- Firebase
+
+## 컴포넌트
+
+- 헤더, 푸터, 리스트, 폼, 캐러셀
+
+## API
+
+- firebase의 firestore를 이용한 실시간 데이터 생성
+- firebase auth를 이용한 사용자 인증 개념
+
+## 사용 스택
+
+- React
+- Firebase(로그인, 보안, 통신)
+- CSS
+- Vercel
+
+## 기타 학습 개념
+
+- 폴더 구조
+- CRA 이용 프로젝트 세팅
+- React hooks(useEffect, useState, useContext, useCallback)
+- React-router-dom 라우터
+
+<br />
+
+# 구현 기능
+
+## 공통 페이지
+
+1.  로그인 페이지
+- Firebase Auth 사용자 인증 기본 로그인
+
+2. 메인페이지
+- 최신 글 목록, 특징 콘텐츠 보여주기
+
+3. 글 목록 페이지
+- 블로그에 작성된 모든 글의 목록 보여주기
+- 해당 글 선택시 상세페이지 이동
+
+4. 글 상세 페이지
+- 글 제목, 내용, 작성자, 작성일 등 표시
+
+5. 글 수정 페이지(CRUD)
+
+6. 카테고리 메뉴
+
+7. 사용자 프로필 페이지(Velog,Medium st)
+
+## 그 외 기능
+
+1. 다크모드
+2. 내가 쓴 글
+3. 댓글 CRUD
