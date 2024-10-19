@@ -36,7 +36,7 @@ export default function PostBoxList({ hasNavigation = true }: PostListProps) {
                     <Link to={`/posts/${index}`}>
                         <div className="post__profile-box">
                             <div className="post__profile" />
-                            <div className="post__author-name">패스트캠퍼스</div>
+                            <div className="post__author-name">딸기</div>
                             <div className="post__date">2023.07.08 토요일</div>
                         </div>
                         <div className="post__title">게시글 {index}</div>
