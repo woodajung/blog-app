@@ -23,6 +23,8 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
       // Unexpected any. Specify a different type 문구 제거
       "@typescript-eslint/no-explicit-any": "off", 
     },

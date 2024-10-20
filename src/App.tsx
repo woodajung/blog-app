@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { app } from "firebaseConf"
+import { app, db } from "firebaseConf"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
 import Router from 'components/Router'
-import './App.css'
 import Loader from "components/Loader";
 
 function App() {
+  //console.log(db);
   const auth = getAuth(app);
   // auth를 체크하기 전에 (initialize 전)에는 loader를 띄워주는 용도 (새로고침할때마다 로그인 페이지를 보여주기 때문에 추가함)
   const [init, setInit] = useState<boolean>(false);

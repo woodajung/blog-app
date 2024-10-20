@@ -8,7 +8,7 @@ export default function Profile() {
         <>
             <Header />
             <ProfileBox />
-            <PostBoxList hasNavigation={false} />
+            <PostBoxList hasNavigation={false} defaultTab="my"/>
             <Footer />
         </>
     )
